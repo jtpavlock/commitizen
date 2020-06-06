@@ -7,22 +7,13 @@ from typing import List, Optional, Union
 from packaging.version import Version
 
 from commitizen import out
-from commitizen.defaults import (
-    MAJOR,
-    MINOR,
-    PATCH,
-    bump_map,
-    bump_message,
-    bump_pattern,
-)
+from commitizen.defaults import MAJOR, MINOR, PATCH, bump_message
 from commitizen.error_codes import CURRENT_VERSION_NOT_FOUND
 from commitizen.git import GitCommit
 
 
 def find_increment(
-    commits: List[GitCommit],
-    regex: str = bump_pattern,
-    increments_map: Union[dict, OrderedDict] = bump_map,
+    commits: List[GitCommit], regex: str, increments_map: Union[dict, OrderedDict]
 ) -> Optional[str]:
 
     if isinstance(increments_map, dict):

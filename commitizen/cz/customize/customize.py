@@ -5,7 +5,7 @@ except ImportError:
 
 from typing import Any, Dict, List, Optional
 
-from commitizen import defaults, out
+from commitizen import out
 from commitizen.config import BaseConfig
 from commitizen.cz.base import BaseCommitizen
 from commitizen.error_codes import MISSING_CONFIG
@@ -14,9 +14,6 @@ __all__ = ["CustomizeCommitsCz"]
 
 
 class CustomizeCommitsCz(BaseCommitizen):
-    bump_pattern = defaults.bump_pattern
-    bump_map = defaults.bump_map
-
     def __init__(self, config: BaseConfig):
         super(CustomizeCommitsCz, self).__init__(config)
 

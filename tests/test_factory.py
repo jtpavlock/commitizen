@@ -6,7 +6,7 @@ from commitizen.config import BaseConfig
 
 def test_factory():
     config = BaseConfig()
-    config.settings.update({"name": defaults.name})
+    config.settings.update({"name": defaults.DEFAULT_SETTINGS["name"]})
     r = factory.commiter_factory(config)
     assert isinstance(r, BaseCommitizen)
 
