@@ -177,7 +177,7 @@ data = {
                         "name": "--start-rev",
                         "default": None,
                         "help": (
-                            "start rev of the changelog."
+                            "start rev of the changelog. "
                             "If not set, it will generate changelog from the start"
                         ),
                     },
